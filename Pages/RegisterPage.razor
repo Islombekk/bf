@@ -1,0 +1,23 @@
+@page "/registerpage"
+
+<div class="container">
+    <div class="login-form mb-3 row card justify-content-end d-flex" style="width: 25rem;">
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="firstname" class="form-label">Firstname</label>
+                <input class="form-control" type="text" name="firstname" id="username" @bind="firstname">
+            </div>
+            <div class="mb-3">
+                <label for="lastname" class="form-label">Lastname</label>
+                <input class="form-control" type="text" name="lastname" id="lastname" @bind="lastname">
+            </div>
+            <div class="mb-3">
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private string firstname { get; set; }
+    private string lastname { get; set; }
+}

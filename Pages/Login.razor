@@ -1,0 +1,42 @@
+@page "/"
+@page "/login"
+@inject IJSRuntime JsRuntime
+@inject NavigationManager NavigationManager
+
+
+<div class="container">
+    <h3>Login</h3>
+    <div class="login-form align-middle card float-right" style="width: 25rem;">
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input class="form-control" type="text" name="username" id="username" @bind="username">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input class="form-control" type="password" name="password" id="password" @bind="password">
+            </div>
+            <div class="mb-3">
+            </div>
+            <button class="btn btn-primary" @onclick="login">Register</button>
+            <a href="" @onclick="registerPage">Not register?</a>
+        </div>
+    </div>
+</div>
+@code {
+
+    private string username { get; set; }
+    private string password { get; set; }
+    private void registerPage()
+    {
+        NavigationManager.NavigateTo("registerpage");
+    }
+    public void login()
+    {
+        Registration registration = new Registration();
+        Register register = new Register(username, registration.encodePassword(password));
+        registration.register(register);
+
+        //await JsRuntime.InvokeVoidAsync("alert", );
+    }
+}

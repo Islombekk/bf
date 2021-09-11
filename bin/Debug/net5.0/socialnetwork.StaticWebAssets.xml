@@ -1,0 +1,4 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="_content/Blazored.Modal" Path="C:\Users\Islombek\.nuget\packages\blazored.modal\6.0.1\build\..\staticwebassets\" />
+  <ContentRoot BasePath="/" Path="C:\Users\Islombek\Desktop\socialnetwork\obj\Debug\net5.0\scopedcss\bundle\" />
+</StaticWebAssets>
